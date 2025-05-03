@@ -2,11 +2,11 @@ const CACHE_NAME = "bunker-cache-v1";
 const urlsToCache = [
   "/",
   "/index.html",
+  "/register.html",
   "/styles.css",
-  "/app.js",
+  "/register.js",
+  "/script.js",
   "/manifest.json",
-  "/icon-192.png",
-  "/icon-512.png"
 ];
 
 self.addEventListener("install", event => {
