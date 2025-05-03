@@ -5,7 +5,8 @@ Works as a web app as well as a PWA (progressive web app)
 ## Installation as a PWA 
 You can use this like any other app on your phone, it has been made to be run offline without issues. Follow the instructions underneath to add it as a PWA. 
 
-TODO: Add video demonstration for iPhone, Android, Windows and  macOS
+### iPhone
+https://github.com/user-attachments/assets/fd9c40da-c79e-4c2a-b962-2edc632d6dd9
 
 If you use Linux, I don't think I need to tell you.
 
