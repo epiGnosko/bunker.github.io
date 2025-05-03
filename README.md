@@ -8,6 +8,12 @@ You can use this like any other app on your phone, it has been made to be run of
 ### iPhone
 https://github.com/user-attachments/assets/fd9c40da-c79e-4c2a-b962-2edc632d6dd9
 
+### Android
+
+### Windows
+
+### macOS
+
 If you use Linux, I don't think I need to tell you.
 
 ## How to use: 
