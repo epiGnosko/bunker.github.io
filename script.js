@@ -89,6 +89,9 @@ document.getElementById('bunkForm').onsubmit = function(e) {
         <strong>Bunks Remaining:</strong> ${tentative - classesToCatchUp}<br>
         <strong>Classes Remaining:</strong> ${tentative}
       </p>
+      <p>
+        Do leave a star on <a href=""> GitHub </a>
+      </p>
     `;
 
     document.getElementById('result').style.display = 'block';
