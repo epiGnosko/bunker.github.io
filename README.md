@@ -6,11 +6,14 @@ Works as a web app as well as a PWA (progressive web app)
 You can use this like any other app on your phone, it has been made to be run offline without issues. Follow the instructions underneath to add it as a PWA. 
 
 ### iPhone
+
 https://github.com/user-attachments/assets/fd9c40da-c79e-4c2a-b962-2edc632d6dd9
 
 ### Android
 
 ### Windows
+
+https://github.com/user-attachments/assets/c2567bc4-7cdd-4a40-b13e-a84df70bc861
 
 ### macOS
 
