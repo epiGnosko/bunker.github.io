@@ -73,7 +73,7 @@ a {
 #result {
   display: none;
   /* height: 70vh; */
-  width: 80vh;
+  max-width: 800px;
   margin: auto;
   background: rgba(60, 56, 54, 0.6);
   border-radius: 12px;
@@ -83,7 +83,7 @@ a {
 
 /* Individual scenario graph */
 .scenario {
-  width: 50vh;
+  width: 90%;
   margin: 16px auto;
 }
 
@@ -107,8 +107,4 @@ a {
   font-size: 0.9em;
   margin-top: 4px;
   font-weight: bold;
-}
-
-blank {
-  height: 40vh;
 }

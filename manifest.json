@@ -3,11 +3,7 @@
   "short_name": "Bunker",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#3f51b5",
-  "icons": [
-    { "src": "icon-192.png", "sizes": "192x192" },
-    { "src": "icon-512.png", "sizes": "512x512" }
-  ]
+  "background_color": "#3c3836",
+  "theme_color": "#ebdbb2",
 }
 
