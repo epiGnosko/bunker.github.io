@@ -1,0 +1,114 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0; 
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("clasroom.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #ebdbb2;
+}
+
+center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+main {
+  max-width: 400px; 
+  margin: 70px auto;
+	background: #282828;
+	padding: 30px;
+	border-radius: 8px;
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.1); */
+}
+
+input, select{
+  margin: 8px 0;
+  padding: 8px;
+  width: 93%;
+  font-size: 1em;
+  color: #282828;
+  background-color: #ebdbb2;
+  border-radius: 12px;
+  border: 1px solid #282828;
+  /* Remove default browser styles */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+}
+
+input:focus{
+  border-color: #d79921;
+}
+
+button { 
+  background: #458588;
+	color: #ebdbb2;
+  margin: 8px 0;
+	padding: 8px;
+	width: 94%;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px; /* Adjust for more or less roundness */
+  font-size: 16px;
+  cursor: pointer;
+}
+
+a {
+  color: #458588;
+}
+
+#result {
+  display: none;
+  /* height: 70vh; */
+  width: 80vh;
+  margin: auto;
+  background: rgba(60, 56, 54, 0.6);
+  border-radius: 12px;
+  padding: 20px 0px;
+  backdrop-filter: blur(8px);
+}
+
+/* Individual scenario graph */
+.scenario {
+  width: 50vh;
+  margin: 16px auto;
+}
+
+/* Bar styling */
+.bar {
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Segment colors */
+.segment-attended { background: #98971a; }  /* Green */
+.segment-bunked  { background: #cc241d; }   /* Red */
+.segment-tentative { background: #7c6f64; } /* Gray */
+
+/* Labels below the bar */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  margin-top: 4px;
+  font-weight: bold;
+}
+
+blank {
+  height: 40vh;
+}
