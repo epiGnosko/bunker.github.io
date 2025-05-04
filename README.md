@@ -11,13 +11,22 @@ https://github.com/user-attachments/assets/fd9c40da-c79e-4c2a-b962-2edc632d6dd9
 
 ### Android
 
+https://github.com/user-attachments/assets/613582d5-9a4b-4e4f-842f-154590ceb038
+
 ### Windows
 
 https://github.com/user-attachments/assets/c2567bc4-7cdd-4a40-b13e-a84df70bc861
 
 ### macOS
 
-If you use Linux, I don't think I need to tell you.
+I didn't have an updated macOS for video demonstration, so here are the steps.
+1) Open https://epignosko.github.io/bunker.github.io/ on safari
+2) Go to files in the menu bar.
+3) Click the Add to Dock option.
+4) Give it a custom name (optional).
+5) You should have an offline install of the app in your dock.
+
+### If you use Linux, I don't think I need to tell you.
 
 ## How to use: 
 1) Register your subjects, with the total number of lectures (usually given in course structure) and the attendance criteria necessary.
