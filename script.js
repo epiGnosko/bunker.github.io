@@ -89,8 +89,8 @@ document.getElementById('bunkForm').onsubmit = function(e) {
         <strong>Bunks Remaining:</strong> ${tentative - classesToCatchUp}<br>
         <strong>Classes Remaining:</strong> ${tentative}
       </p>
-      <p>
-        Do leave a star on <a href=""> GitHub </a>
+      <p class="promotion">
+        Do leave a star on <a href="https://github.com/epiGnosko/bunker.github.io"> GitHub </a>
       </p>
     `;
 
