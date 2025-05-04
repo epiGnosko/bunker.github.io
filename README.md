@@ -30,6 +30,7 @@ I didn't have an updated macOS for video demonstration, so here are the steps.
 ### If you use Linux, I don't think I need to tell you.
 
 ## How to use: 
+1) Open https://epignosko.github.io/bunker.github.io/
 1) Register your subjects, with the total number of lectures (usually given in course structure) and the attendance criteria necessary.
 2) Once done, select the subject, enter the present attendance and the number of lectures held.
 3) Bunk your class safely!
