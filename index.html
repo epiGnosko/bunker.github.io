@@ -6,20 +6,32 @@
     <title>Class Bunker Organizer</title>
     <link rel="manifest" href="manifest.json"/>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" href="favicon.ico"/>
   </head>
   <body>
     <nav>
     </nav>
     <center>
       <main>
+        <img src="icon-192.png">
         <h1>Class Bunker Organizer</h1>
         <form id="bunkForm">
           <select id="subjectSelect">
             <option value="">Select Subject</option>
             <!-- Options will be added here by JavaScript -->
           </select>
-          <label><input type="number" placeholder="Attended Classes" id="attended" required></label><br>
-          <label><input type="number" placeholder="Total Classes Elapsed" id="elapsed" required></label><br>
+          <inline>
+            <label>
+              <input type="number" placeholder="Attended Classes" id="attended" required>
+            </label><br>
+            <increment class="add" id="addattended">+</increment>
+          </inline>
+          <inline>
+            <label>
+              <input type="number" placeholder="Total Classes Elapsed" id="elapsed" required>
+            </label><br>
+            <increment class="add" id="addelapsed">+</increment>
+          </inline>
           <button type="submit">Calculate</button>
         </form>
         <a href="register.html"> Register new subject </a>

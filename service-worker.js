@@ -7,6 +7,7 @@ const urlsToCache = [
   "/register.js",
   "/script.js",
   "/manifest.json",
+  "/favicon.ico",
 ];
 
 self.addEventListener("install", event => {

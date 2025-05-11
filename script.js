@@ -32,6 +32,27 @@ function createGraph(title, data) {
   `;
 }
 
+document.getElementById('subjectSelect').addEventListener('change', function(){
+  const subjects = JSON.parse(localStorage.getItem('subjects'));
+  const selection = document.getElementById('subjectSelect').value;
+  subjects.forEach(subj => {
+    if (subj.subject === selection) {
+      document.getElementById('attended').value = subj.attended;
+      document.getElementById('elapsed').value = subj.elapsed;
+    }
+  })
+});
+
+document.getElementById('addattended').addEventListener('click', function(){
+  const attend = +document.getElementById('attended').value;
+  document.getElementById('attended').value = attend + 1;
+})
+
+document.getElementById('addelapsed').addEventListener('click', function(){
+  const elapse = +document.getElementById('elapsed').value;
+  document.getElementById('elapsed').value = elapse + 1;
+})
+
 document.getElementById('bunkForm').onsubmit = function(e) {
   e.preventDefault();
   const subject = document.getElementById('subjectSelect').value;
@@ -39,6 +60,13 @@ document.getElementById('bunkForm').onsubmit = function(e) {
   const elapsed = Number(document.getElementById('elapsed').value);
 
   const subjects = JSON.parse(localStorage.getItem('subjects')) || [];
+  subjects.forEach(subj => {
+    if (subj.subject === subject){
+      subj.attended = attended;
+      subj.elapsed = elapsed;
+    }
+  })
+  localStorage.setItem('subjects', JSON.stringify(subjects));
 
   const subjectdata = subjects.find(
     s => s.subject === subject
@@ -47,8 +75,8 @@ document.getElementById('bunkForm').onsubmit = function(e) {
   if (subjectdata){
     const expectedClasses = Math.ceil(subjectdata.total * subjectdata.minPercent / 100);
     const tentative = subjectdata.total - elapsed;
-    const classesToCatchUp = expectedClasses - attended;
-    const bunksRemaining = tentative - classesToCatchUp;
+    const classesToCatchUp = Math.max(Math.min(expectedClasses - attended, tentative), 0);
+    const bunksRemaining = Math.max(tentative - classesToCatchUp, 0);
     const bunked = elapsed - attended
 
 
@@ -76,6 +104,14 @@ document.getElementById('bunkForm').onsubmit = function(e) {
       total: subjectdata.total
     };
 
+    // Optimum case: bunk exactly prescribed classes
+    const optimumData = {
+      attended: attended + tentative - bunksRemaining,
+      bunked: bunked + bunksRemaining,
+      tentative: 0,
+      total: subjectdata.total
+    };
+
     if (classesToCatchUp < 0){
       classesToCatchUp = 0;
     }
@@ -84,6 +120,7 @@ document.getElementById('bunkForm').onsubmit = function(e) {
     document.getElementById('result').innerHTML = `
       ${createGraph("Current Scenario", currentData)}
       ${createGraph("Best Case (Attend All Tentative)", bestData)}
+      ${createGraph("Optimum Case (Bunk "+ bunksRemaining +" more classes)", optimumData)}
       ${createGraph("Worst Case (Bunk All Tentative)", worstData)}
       <p style="text-align:center; margin-top:20px;">
         <strong>Bunks Remaining:</strong> ${tentative - classesToCatchUp}<br>

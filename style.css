@@ -29,13 +29,29 @@ main {
   margin: 70px auto;
 	background: #282828;
 	padding: 30px;
-	border-radius: 8px;
+	border-radius: 10px;
 }
 
-input, select{
+select{
   margin: 8px 0;
   padding: 8px;
-  width: 93%;
+  width: 100%;
+  font-size: 1em;
+  color: #282828;
+  background-color: #ebdbb2;
+  border-radius: 12px;
+  border: 1px solid #282828;
+  /* Remove default browser styles */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+}
+
+input {
+  margin: 8px 0;
+  padding: 8px;
+  width: 100%;
   font-size: 1em;
   color: #282828;
   background-color: #ebdbb2;
@@ -52,17 +68,53 @@ input:focus{
   border-color: #d79921;
 }
 
+input[type=number]{
+  appearance: unset;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
 button { 
   background: #458588;
 	color: #ebdbb2;
   margin: 8px 0;
 	padding: 8px;
-	width: 94%;
+	width: 100%;
   border: none;
   padding: 12px 24px;
   border-radius: 8px; /* Adjust for more or less roundness */
   font-size: 16px;
   cursor: pointer;
+}
+
+increment{
+  background: #458588;
+	color: #ebdbb2;
+  border: none;
+  border-radius: 8px; /* Adjust for more or less roundness */
+  font-size: 2em;
+  cursor: pointer;
+  font-size: 2em;
+  text-align: center;
+  width: 38px;
+  height: 38px;
+  margin: 0px;
+  margin-left: 12px;
+  padding: 0;
+  aspect-ratio: 1;
+}
+
+
+inline{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+}
+
+label{
+  width: 100%
 }
 
 a {
@@ -112,4 +164,8 @@ a {
   font-size: 1.3em;
   font-style: italic;
   text-align: center;
+}
+
+img {
+  border-radius: 8px;
 }
