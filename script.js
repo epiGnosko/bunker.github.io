@@ -53,6 +53,10 @@ document.getElementById('addelapsed').addEventListener('click', function(){
   document.getElementById('elapsed').value = elapse + 1;
 })
 
+document.getElementById('clean').addEventListener('click', function(){
+  localStorage.clear();
+})
+
 document.getElementById('bunkForm').onsubmit = function(e) {
   e.preventDefault();
   const subject = document.getElementById('subjectSelect').value;
