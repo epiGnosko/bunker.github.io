@@ -54,8 +54,10 @@ document.getElementById('addelapsed').addEventListener('click', function(){
 })
 
 document.getElementById('clean').addEventListener('click', function(){
-  localStorage.clear();
-})
+  if (confirm('Are you sure you want to clear all data?')) {
+    localStorage.clear();
+  }
+});
 
 document.getElementById('bunkForm').onsubmit = function(e) {
   e.preventDefault();
